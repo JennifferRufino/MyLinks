@@ -13,10 +13,10 @@ export default function MyLinks(){
             <Menu />
             <Title>Meus Links</Title>
             <ListLinks
-                data={[{id: 1, link: 'test.com'}, {id: 2, link: 'test.com'} ]}
+                data={[1, 2, 3, 4, 5, 6]}
                 keyExtractor = {(item) => String(item.id)}
                 renderItem = {({item}) => <ListItem data={item} /> }
-                contentContainerStyle = {{paddingBottom: 20}}
+                contentContainerStyle = {{paddingBottom: 22}}
                 showsVerticalScrollIndicator = {false}
             />
         </Container>
