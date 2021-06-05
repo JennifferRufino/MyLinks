@@ -28,6 +28,7 @@ import {
 } from './styles';
 
 import api from '../../services/api';
+import {getLinkSave, linkSave} from '../../utils/storeLinks';
 
 export default function Home(){
 
@@ -49,6 +50,10 @@ export default function Home(){
             setData(response.data);
 
             setModalVisible(true);
+
+            //Deu tudo certo,  agora preciso salvar esse link em uma lista nesse storage
+
+            linkSave('sujeitolinks', response.data);
 
             Keyboard.dismiss();
             setLoading(false);
